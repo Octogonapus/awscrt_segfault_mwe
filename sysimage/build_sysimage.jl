@@ -10,7 +10,7 @@ function build()
         precompile_statements_file = joinpath(@__DIR__, "precompile_list.jl"),
         cpu_target = "generic;sandybridge,-xsaveopt,clone_all;haswell,-rdrnd,base(1)",
         incremental = true,
-        include_transitive_dependencies = false,
+        include_transitive_dependencies = true,
     )
     return sysimage_path
 end
