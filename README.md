@@ -19,10 +19,10 @@ MQTT_ENABLED="false" julia --project=sysimage -e 'import Pkg; Pkg.build(); inclu
 Set these environment variables in your shell (these need to point to real AWS infra):
 
 ```sh
-export MQTT_ENDPOINT="..."
-export MQTT_CERT_PATH="..."
-export MQTT_PRIVATE_KEY_PATH="..."
-export MQTT_CA_PATH="..."
+export MQTT_ENDPOINT="..." AWS IoT > Settings > Device data endpoint
+export MQTT_CERT_PATH="..." # the xxx-certificate.pem.crt file
+export MQTT_PRIVATE_KEY_PATH="..." # the xxx-private.pem.key file
+export MQTT_CA_PATH="..." # AmazonRootCA1.pem
 ```
 
 Run the test with the sysimage (optionally under `rr`):
